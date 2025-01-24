@@ -1,0 +1,37 @@
+---
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/javascript-3d.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Proyectos Javascript</title>
+  </head>
+  <body>
+    <div class="fixed left-0 top-0 -z-10 h-full w-full"><div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div></div>
+    <Hero />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    margin: 0; /* Elimina márgenes por defecto */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos hijos en columna */
+  }
+
+  main {
+    flex-grow: 1; /* Hace que el main ocupe el espacio restante */
+  }
+</style>

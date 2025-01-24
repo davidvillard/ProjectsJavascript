@@ -1,0 +1,24 @@
+---
+import LayoutProyectoCronometro from "../layouts/LayoutProyectoCronometro.astro";
+---
+
+<LayoutProyectoCronometro>
+    <div class="cronometer flex flex-col justify-center items-center text-white relative">
+      <div class="w-96 h-96 rounded-full border-2 border-rose-600 flex justify-center items-center relative">
+        <div class="time text-6xl font-bold">
+          <span id="minutos">00</span>:<span id="segundos">00</span>
+        </div>
+        <!-- Bola que se mueve -->
+        <div id="bola" class="absolute w-12 h-12 border-2 border-white bg-white rounded-full"></div>
+      </div>
+  
+      <div class="buttons text-xl font-bold mt-8 space-x-12">
+        <button id="start" class="rounded-full bg-green-600 hover:bg-green-700 py-1 px-5">Start</button>
+        <button id="stop" class="rounded-full bg-red-600 hover:bg-red-700 py-1 px-5">Stop</button>
+        <button id="reset" class="rounded-full bg-gray-600 hover:bg-gray-700 py-1 px-5">Reset</button>
+      </div>
+    </div>
+  </LayoutProyectoCrono>
+  
+  <script src="../scripts/cronometro.js"></script>
+  

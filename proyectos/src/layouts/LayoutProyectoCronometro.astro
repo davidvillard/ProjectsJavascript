@@ -1,0 +1,37 @@
+---
+import Footer from "../components/Footer.astro";
+import ReturnBack from "../components/ReturnBack.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <ReturnBack />
+    <main class="flex justify-center items-center">
+      <div class="fixed left-0 top-0 -z-10 h-full w-full"><div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-black"></div></div>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    margin: 0; /* Elimina márgenes por defecto */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos hijos en columna */
+  }
+
+  main {
+    flex-grow: 1; /* Hace que el main ocupe el espacio restante */
+  }
+</style>
